@@ -1,0 +1,9 @@
+
+
+Flow:  Every time they speak until they stop, record that audio with  a timestamp. convert the file via ffmpeg wrapper.
+
+On seperate thread, constantly look at all files in the folder. if that folder hasnt been parsed yet, delete it.
+
+
+
+
