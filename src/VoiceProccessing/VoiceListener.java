@@ -61,10 +61,19 @@ public class VoiceListener{
   private void populateCommands() {
 
     commands
-        .put("!progress",
-            event -> event.getMessage().getChannel().flatMap(
-                channel -> channel.createMessage("This command should be updated but too lazy."))
+        .put("progress",
+            event -> 
+        {
+           Mono<Void> progressCommand = event.getMessage().getChannel().flatMap(
+        
+                channel -> channel.createMessage("This command should be updated but too lazy.")
                 .then());
+    
+           progressCommand.subscribe();
+           return progressCommand;
+    
+        });
+    
 
 
 

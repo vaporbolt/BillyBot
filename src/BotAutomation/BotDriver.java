@@ -57,7 +57,7 @@ public class BotDriver {
 
 
     
-
+    // validate speech to text api
     SpeechClient speech = null;
     try {
       speech = SpeechClient.create();
@@ -82,7 +82,6 @@ public class BotDriver {
     streamingThread.start();
     
 
-    // login.block();
 
 
 

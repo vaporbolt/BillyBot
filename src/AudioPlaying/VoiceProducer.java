@@ -102,7 +102,7 @@ public class VoiceProducer {
 
     VOICECOMMANDS.put("stop", event -> {
       // GuildAudioManager.of(Snowflake.of("860243639253860376"));
-      VoiceChannel channel = gatewayClient.getChannelById(Snowflake.of("860243639253860376"))
+      channel = gatewayClient.getChannelById(Snowflake.of("860243639253860376"))
           .cast(VoiceChannel.class).block();
       Mono<Void> command = Mono.fromRunnable(() -> {
         final AudioProvider provider = GuildAudioManager.of(channel.getGuildId()).getProvider();
@@ -120,7 +120,7 @@ public class VoiceProducer {
     });
 
     VOICECOMMANDS.put("i'm gonna come ", event -> {
-      VoiceChannel channel = gatewayClient.getChannelById(Snowflake.of("860243639253860376"))
+      channel = gatewayClient.getChannelById(Snowflake.of("860243639253860376"))
           .cast(VoiceChannel.class).block();
       Mono<Void> command = Mono.fromRunnable(() -> {
         System.out.println("audio command initiating");
@@ -139,7 +139,7 @@ public class VoiceProducer {
     });
 
     VOICECOMMANDS.put("should i come", event -> {
-      VoiceChannel channel = gatewayClient.getChannelById(Snowflake.of("860243639253860376"))
+      channel = gatewayClient.getChannelById(Snowflake.of("860243639253860376"))
           .cast(VoiceChannel.class).block();
       Mono<Void> command = Mono.fromRunnable(() -> {
         System.out.println("audio command initiating");
@@ -158,7 +158,7 @@ public class VoiceProducer {
     });
 
     VOICECOMMANDS.put("i'm going to come", event -> {
-      VoiceChannel channel = gatewayClient.getChannelById(Snowflake.of("860243639253860376"))
+      channel = gatewayClient.getChannelById(Snowflake.of("860243639253860376"))
           .cast(VoiceChannel.class).block();
       Mono<Void> command = Mono.fromRunnable(() -> {
         System.out.println("audio command initiating");
@@ -177,7 +177,7 @@ public class VoiceProducer {
     });
 
     VOICECOMMANDS.put("i'm coming", event -> {
-      VoiceChannel channel = gatewayClient.getChannelById(Snowflake.of("860243639253860376"))
+      channel = gatewayClient.getChannelById(Snowflake.of("860243639253860376"))
           .cast(VoiceChannel.class).block();
       Mono<Void> command = Mono.fromRunnable(() -> {
         System.out.println("audio command initiating");
@@ -196,7 +196,7 @@ public class VoiceProducer {
     });
 
     VOICECOMMANDS.put("don't come", event -> {
-      VoiceChannel channel = gatewayClient.getChannelById(Snowflake.of("860243639253860376"))
+      channel = gatewayClient.getChannelById(Snowflake.of("860243639253860376"))
           .cast(VoiceChannel.class).block();
       Mono<Void> command = Mono.fromRunnable(() -> {
         System.out.println("audio command initiating");
@@ -215,7 +215,7 @@ public class VoiceProducer {
     });
 
     VOICECOMMANDS.put("do not come", event -> {
-      VoiceChannel channel = gatewayClient.getChannelById(Snowflake.of("860243639253860376"))
+      channel = gatewayClient.getChannelById(Snowflake.of("860243639253860376"))
           .cast(VoiceChannel.class).block();
       Mono<Void> command = Mono.fromRunnable(() -> {
         System.out.println("audio command initiating");
@@ -234,7 +234,7 @@ public class VoiceProducer {
     });
 
     VOICECOMMANDS.put("km", event -> {
-      VoiceChannel channel = gatewayClient.getChannelById(Snowflake.of("860243639253860376"))
+      channel = gatewayClient.getChannelById(Snowflake.of("860243639253860376"))
           .cast(VoiceChannel.class).block();
       Mono<Void> command = Mono.fromRunnable(() -> {
         System.out.println("audio command initiating");
@@ -253,7 +253,7 @@ public class VoiceProducer {
     });
 
     VOICECOMMANDS.put("kilometers", event -> {
-      VoiceChannel channel = gatewayClient.getChannelById(Snowflake.of("860243639253860376"))
+      channel = gatewayClient.getChannelById(Snowflake.of("860243639253860376"))
           .cast(VoiceChannel.class).block();
       Mono<Void> command = Mono.fromRunnable(() -> {
         System.out.println("audio command initiating");
@@ -272,7 +272,7 @@ public class VoiceProducer {
     });
 
     VOICECOMMANDS.put("wow", event -> {
-      VoiceChannel channel = gatewayClient.getChannelById(Snowflake.of("860243639253860376"))
+      channel = gatewayClient.getChannelById(Snowflake.of("860243639253860376"))
           .cast(VoiceChannel.class).block();
       Mono<Void> command = Mono.fromRunnable(() -> {
         System.out.println("audio command initiating");
@@ -289,7 +289,7 @@ public class VoiceProducer {
 
     });
     VOICECOMMANDS.put("unlucky", event -> {
-      VoiceChannel channel = gatewayClient.getChannelById(Snowflake.of("860243639253860376"))
+      channel = gatewayClient.getChannelById(Snowflake.of("860243639253860376"))
           .cast(VoiceChannel.class).block();
       Mono<Void> command = Mono.fromRunnable(() -> {
         System.out.println("audio command initiating");
@@ -307,7 +307,7 @@ public class VoiceProducer {
 
     });
     VOICECOMMANDS.put("bad luck", event -> {
-      VoiceChannel channel = gatewayClient.getChannelById(Snowflake.of("860243639253860376"))
+      channel = gatewayClient.getChannelById(Snowflake.of("860243639253860376"))
           .cast(VoiceChannel.class).block();
       Mono<Void> command = Mono.fromRunnable(() -> {
         System.out.println("audio command initiating");
@@ -325,7 +325,7 @@ public class VoiceProducer {
 
     });
     VOICECOMMANDS.put("oh my god", event -> {
-      VoiceChannel channel = gatewayClient.getChannelById(Snowflake.of("860243639253860376"))
+      channel = gatewayClient.getChannelById(Snowflake.of("860243639253860376"))
           .cast(VoiceChannel.class).block();
       Mono<Void> command = Mono.fromRunnable(() -> {
         System.out.println("audio command initiating");
@@ -344,7 +344,7 @@ public class VoiceProducer {
     });
 
     VOICECOMMANDS.put("based", event -> {
-      VoiceChannel channel = gatewayClient.getChannelById(Snowflake.of("860243639253860376"))
+      channel = gatewayClient.getChannelById(Snowflake.of("860243639253860376"))
           .cast(VoiceChannel.class).block();
       Mono<Void> command = Mono.fromRunnable(() -> {
         System.out.println("audio command initiating");
@@ -362,7 +362,7 @@ public class VoiceProducer {
     });
 
     VOICECOMMANDS.put("bass", event -> {
-      VoiceChannel channel = gatewayClient.getChannelById(Snowflake.of("860243639253860376"))
+      channel = gatewayClient.getChannelById(Snowflake.of("860243639253860376"))
           .cast(VoiceChannel.class).block();
       Mono<Void> command = Mono.fromRunnable(() -> {
         System.out.println("audio command initiating");
@@ -380,7 +380,7 @@ public class VoiceProducer {
     });
 
     VOICECOMMANDS.put("oh shit", event -> {
-      VoiceChannel channel = gatewayClient.getChannelById(Snowflake.of("860243639253860376"))
+      channel = gatewayClient.getChannelById(Snowflake.of("860243639253860376"))
           .cast(VoiceChannel.class).block();
       Mono<Void> command = Mono.fromRunnable(() -> {
         System.out.println("audio command initiating");
@@ -399,7 +399,7 @@ public class VoiceProducer {
     });
 
     VOICECOMMANDS.put("oh ship", event -> {
-      VoiceChannel channel = gatewayClient.getChannelById(Snowflake.of("860243639253860376"))
+      channel = gatewayClient.getChannelById(Snowflake.of("860243639253860376"))
           .cast(VoiceChannel.class).block();
       Mono<Void> command = Mono.fromRunnable(() -> {
         System.out.println("audio command initiating");
@@ -418,7 +418,7 @@ public class VoiceProducer {
     });
 
     VOICECOMMANDS.put("ocean", event -> {
-      VoiceChannel channel = gatewayClient.getChannelById(Snowflake.of("860243639253860376"))
+      channel = gatewayClient.getChannelById(Snowflake.of("860243639253860376"))
           .cast(VoiceChannel.class).block();
       Mono<Void> command = Mono.fromRunnable(() -> {
         System.out.println("audio command initiating");
@@ -437,7 +437,7 @@ public class VoiceProducer {
     });
 
     VOICECOMMANDS.put("holy shit", event -> {
-      VoiceChannel channel = gatewayClient.getChannelById(Snowflake.of("860243639253860376"))
+      channel = gatewayClient.getChannelById(Snowflake.of("860243639253860376"))
           .cast(VoiceChannel.class).block();
       Mono<Void> command = Mono.fromRunnable(() -> {
         System.out.println("audio command initiating");
@@ -457,7 +457,7 @@ public class VoiceProducer {
 
 
     VOICECOMMANDS.put("holy ship", event -> {
-      VoiceChannel channel = gatewayClient.getChannelById(Snowflake.of("860243639253860376"))
+      channel = gatewayClient.getChannelById(Snowflake.of("860243639253860376"))
           .cast(VoiceChannel.class).block();
       Mono<Void> command = Mono.fromRunnable(() -> {
         System.out.println("audio command initiating");
@@ -476,7 +476,7 @@ public class VoiceProducer {
     });
 
     VOICECOMMANDS.put("holyshit", event -> {
-      VoiceChannel channel = gatewayClient.getChannelById(Snowflake.of("860243639253860376"))
+      channel = gatewayClient.getChannelById(Snowflake.of("860243639253860376"))
           .cast(VoiceChannel.class).block();
       Mono<Void> command = Mono.fromRunnable(() -> {
         System.out.println("audio command initiating");
@@ -495,7 +495,7 @@ public class VoiceProducer {
     });
 
     VOICECOMMANDS.put("do you understand", event -> {
-      VoiceChannel channel = gatewayClient.getChannelById(Snowflake.of("860243639253860376"))
+      channel = gatewayClient.getChannelById(Snowflake.of("860243639253860376"))
           .cast(VoiceChannel.class).block();
       Mono<Void> command = Mono.fromRunnable(() -> {
         System.out.println("audio command initiating");
@@ -515,7 +515,7 @@ public class VoiceProducer {
 
 
     VOICECOMMANDS.put("kill the hoe", event -> {
-      VoiceChannel channel = gatewayClient.getChannelById(Snowflake.of("860243639253860376"))
+      channel = gatewayClient.getChannelById(Snowflake.of("860243639253860376"))
           .cast(VoiceChannel.class).block();
       Mono<Void> command = Mono.fromRunnable(() -> {
         System.out.println("audio command initiating");
@@ -534,7 +534,7 @@ public class VoiceProducer {
     });
 
     VOICECOMMANDS.put("kill da hoe", event -> {
-      VoiceChannel channel = gatewayClient.getChannelById(Snowflake.of("860243639253860376"))
+      channel = gatewayClient.getChannelById(Snowflake.of("860243639253860376"))
           .cast(VoiceChannel.class).block();
       Mono<Void> command = Mono.fromRunnable(() -> {
         System.out.println("audio command initiating");
@@ -555,7 +555,7 @@ public class VoiceProducer {
     });
 
     VOICECOMMANDS.put("kill da ho", event -> {
-      VoiceChannel channel = gatewayClient.getChannelById(Snowflake.of("860243639253860376"))
+      channel = gatewayClient.getChannelById(Snowflake.of("860243639253860376"))
           .cast(VoiceChannel.class).block();
       Mono<Void> command = Mono.fromRunnable(() -> {
         System.out.println("audio command initiating");
@@ -576,7 +576,7 @@ public class VoiceProducer {
     });
 
     VOICECOMMANDS.put("kill the ho", event -> {
-      VoiceChannel channel = gatewayClient.getChannelById(Snowflake.of("860243639253860376"))
+      channel = gatewayClient.getChannelById(Snowflake.of("860243639253860376"))
           .cast(VoiceChannel.class).block();
       Mono<Void> command = Mono.fromRunnable(() -> {
         System.out.println("audio command initiating");
@@ -597,7 +597,7 @@ public class VoiceProducer {
     });
 
     VOICECOMMANDS.put("missed", event -> {
-      VoiceChannel channel = gatewayClient.getChannelById(Snowflake.of("860243639253860376"))
+      channel = gatewayClient.getChannelById(Snowflake.of("860243639253860376"))
           .cast(VoiceChannel.class).block();
       Mono<Void> command = Mono.fromRunnable(() -> {
         System.out.println("audio command initiating");
@@ -619,7 +619,7 @@ public class VoiceProducer {
 
 
     VOICECOMMANDS.put("the world", event -> {
-      VoiceChannel channel = gatewayClient.getChannelById(Snowflake.of("860243639253860376"))
+      channel = gatewayClient.getChannelById(Snowflake.of("860243639253860376"))
           .cast(VoiceChannel.class).block();
       Mono<Void> command = Mono.fromRunnable(() -> {
         System.out.println("audio command initiating");
@@ -640,7 +640,7 @@ public class VoiceProducer {
     });
 
     VOICECOMMANDS.put("mountain dew", event -> {
-      VoiceChannel channel = gatewayClient.getChannelById(Snowflake.of("860243639253860376"))
+      channel = gatewayClient.getChannelById(Snowflake.of("860243639253860376"))
           .cast(VoiceChannel.class).block();
       Mono<Void> command = Mono.fromRunnable(() -> {
         System.out.println("audio command initiating");
@@ -661,7 +661,7 @@ public class VoiceProducer {
     });
 
     VOICECOMMANDS.put("mountain do", event -> {
-      VoiceChannel channel = gatewayClient.getChannelById(Snowflake.of("860243639253860376"))
+      channel = gatewayClient.getChannelById(Snowflake.of("860243639253860376"))
           .cast(VoiceChannel.class).block();
       Mono<Void> command = Mono.fromRunnable(() -> {
         System.out.println("audio command initiating");
@@ -682,7 +682,7 @@ public class VoiceProducer {
     });
 
     VOICECOMMANDS.put("blasting", event -> {
-      VoiceChannel channel = gatewayClient.getChannelById(Snowflake.of("860243639253860376"))
+      channel = gatewayClient.getChannelById(Snowflake.of("860243639253860376"))
           .cast(VoiceChannel.class).block();
       Mono<Void> command = Mono.fromRunnable(() -> {
         System.out.println("audio command initiating");
@@ -703,7 +703,7 @@ public class VoiceProducer {
     });
 
     VOICECOMMANDS.put("no use", event -> {
-      VoiceChannel channel = gatewayClient.getChannelById(Snowflake.of("860243639253860376"))
+      channel = gatewayClient.getChannelById(Snowflake.of("860243639253860376"))
           .cast(VoiceChannel.class).block();
       Mono<Void> command = Mono.fromRunnable(() -> {
         System.out.println("audio command initiating");
@@ -724,7 +724,7 @@ public class VoiceProducer {
     });
 
     VOICECOMMANDS.put("close", event -> {
-      VoiceChannel channel = gatewayClient.getChannelById(Snowflake.of("860243639253860376"))
+      channel = gatewayClient.getChannelById(Snowflake.of("860243639253860376"))
           .cast(VoiceChannel.class).block();
       Mono<Void> command = Mono.fromRunnable(() -> {
         System.out.println("audio command initiating");
@@ -744,7 +744,7 @@ public class VoiceProducer {
     });
 
     VOICECOMMANDS.put("metal gear", event -> {
-      VoiceChannel channel = gatewayClient.getChannelById(Snowflake.of("860243639253860376"))
+      channel = gatewayClient.getChannelById(Snowflake.of("860243639253860376"))
           .cast(VoiceChannel.class).block();
       Mono<Void> command = Mono.fromRunnable(() -> {
         System.out.println("audio command initiating");
@@ -759,7 +759,7 @@ public class VoiceProducer {
     });
 
     VOICECOMMANDS.put("nanomachines", event -> {
-      VoiceChannel channel = gatewayClient.getChannelById(Snowflake.of("860243639253860376"))
+      channel = gatewayClient.getChannelById(Snowflake.of("860243639253860376"))
           .cast(VoiceChannel.class).block();
       Mono<Void> command = Mono.fromRunnable(() -> {
         System.out.println("audio command initiating");
@@ -774,7 +774,7 @@ public class VoiceProducer {
     });
 
     VOICECOMMANDS.put("psycho mantis", event -> {
-      VoiceChannel channel = gatewayClient.getChannelById(Snowflake.of("860243639253860376"))
+      channel = gatewayClient.getChannelById(Snowflake.of("860243639253860376"))
           .cast(VoiceChannel.class).block();
       Mono<Void> command = Mono.fromRunnable(() -> {
         System.out.println("audio command initiating");
@@ -789,7 +789,7 @@ public class VoiceProducer {
     });
 
     VOICECOMMANDS.put("revolution", event -> {
-      VoiceChannel channel = gatewayClient.getChannelById(Snowflake.of("860243639253860376"))
+      channel = gatewayClient.getChannelById(Snowflake.of("860243639253860376"))
           .cast(VoiceChannel.class).block();
       Mono<Void> command = Mono.fromRunnable(() -> {
         System.out.println("audio command initiating");
@@ -804,7 +804,7 @@ public class VoiceProducer {
     });
 
     VOICECOMMANDS.put("they want to", event -> {
-      VoiceChannel channel = gatewayClient.getChannelById(Snowflake.of("860243639253860376"))
+    channel = gatewayClient.getChannelById(Snowflake.of("860243639253860376"))
           .cast(VoiceChannel.class).block();
       Mono<Void> command = Mono.fromRunnable(() -> {
         System.out.println("audio command initiating");
