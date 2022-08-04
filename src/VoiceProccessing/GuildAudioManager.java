@@ -5,7 +5,7 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 import com.sedmelluq.discord.lavaplayer.player.AudioPlayer;
-
+import AudioPlaying.VoiceProducer;
 import discord4j.common.util.Snowflake;
 
 public final class GuildAudioManager {
@@ -21,7 +21,7 @@ public final class GuildAudioManager {
 	  private final LavaPlayerAudioProvider provider;
 
 	  private GuildAudioManager() {
-	    player = BotDriver.PLAYER_MANAGER.createPlayer();
+	    player = VoiceProducer.PLAYER_MANAGER.createPlayer();
 	    scheduler = new AudioTrackScheduler(player);
 	    provider = new LavaPlayerAudioProvider(player);
 

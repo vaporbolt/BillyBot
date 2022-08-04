@@ -51,10 +51,8 @@ public class VoiceRecordManager implements Runnable {
 	public static final String AUDIODIRECTORY = "DiscordAudioStreamer/recordings"; // holds converted .wav files
 	public static final File AUDIOFOLDER = new File(AUDIODIRECTORY);
 	private SpeechClient speech; // the google Speech Client needed to use api calls.
-	private static final HashMap<String, Command> VOICECOMMANDS = new HashMap<String, Command>();
-	private GatewayDiscordClient gatewayClient;
 	
-	public VoiceRecordManager(SpeechClient speech, DiscordClient client, GatewayDiscordClient gatewayClient) {
+	public VoiceRecordManager(SpeechClient speech) {
 
 		if (exists) {
 			throw new IllegalStateException("Only one voice record manager object can be instanitated");
@@ -63,8 +61,6 @@ public class VoiceRecordManager implements Runnable {
 		exists = true;
 		
 		this.speech = speech;
-		this.gatewayClient = gatewayClient;
-		this.populateCommands();
 		
 		
 
@@ -133,57 +129,7 @@ public class VoiceRecordManager implements Runnable {
 	}
 	
 	
-	/**
-	 * Populates the HashMap of voice commands with commands.
-	 */
-	private  void populateCommands()
-	{
-		VOICECOMMANDS.put("can i get a hell yeah", event -> {
-			
-			Mono<Void> command =  this.gatewayClient.getChannelById(Snowflake.of("860243639253860375"))
-		    .cast(MessageChannel.class)
-		    .flatMap(MessageChannel -> MessageChannel.createMessage("HELL YEAH BROTHER!")).then();
-			command.subscribe();
-			return command;
-			
-		});
-		 VOICECOMMANDS.put("play imperial march", event ->
-		 {      
-				VoiceChannel channel = gatewayClient.getChannelById(Snowflake.of("860243639253860376")).cast(VoiceChannel.class).block();
-				Mono<Void> command = Mono.fromRunnable(() -> {
-				                System.out.println("audio command iniating");
-				                final AudioProvider provider = GuildAudioManager.of(channel.getGuildId()).getProvider();
-				                final VoiceConnection connection = channel.join(spec -> spec.setProvider(provider)).block();
-							    final AudioPlayer trackPlayer =  GuildAudioManager.of(channel.getGuildId()).getPlayer();
-								BotDriver.PLAYER_MANAGER.loadItem("https://www.youtube.com/watch?v=u7HF4JG1pOg&ab_channel=JohnWilliamsVEVO",  new TrackScheduler(trackPlayer)); 
-		
-				 });
-				
-				command.subscribe();
-				return command;
-		 
-				});
-		 
-		 VOICECOMMANDS.put("stop", event ->
-		 {      
-			  //  GuildAudioManager.of(Snowflake.of("860243639253860376"));
-				VoiceChannel channel = gatewayClient.getChannelById(Snowflake.of("860243639253860376")).cast(VoiceChannel.class).block();
-				Mono<Void> command = Mono.fromRunnable(() -> {
-					final AudioProvider provider = GuildAudioManager.of(channel.getGuildId()).getProvider();
-					//final VoiceConnection connection = channel.join(spec -> spec.setProvider(provider)).block();
-				                System.out.println("audio command iniating");
-							    AudioPlayer trackPlayer =  GuildAudioManager.of(channel.getGuildId()).getPlayer();
-								trackPlayer.stopTrack();
-		
-				 });
-				
-				command.subscribe();
-				return command;
-		 
-				});
-
-		
-	}
+	
 	
 	
 	

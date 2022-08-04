@@ -239,6 +239,22 @@ client.on('messageCreate', async (message) => {
            // });
 
         //}
+
+    
+    }
+    else if (message.content.startsWith('!leave')) {
+
+        if(connection != null)
+        {
+            connection.destroy();
+        }
+
+        else{
+            return msg.edit('Bot is not currently in a voice channel');
+        }
+          
+
+
     }
     
 })

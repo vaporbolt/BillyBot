@@ -37,6 +37,7 @@ public class VoiceProducer {
   private static GatewayDiscordClient gatewayClient;
   private static DiscordClient client;
   public static AudioPlayerManager PLAYER_MANAGER;
+  public static VoiceChannel channel;
   static {
     PLAYER_MANAGER = new DefaultAudioPlayerManager();
     // This is an optimization strategy that Discord4J can utilize to minimize allocations
@@ -55,6 +56,7 @@ public class VoiceProducer {
     populateVoiceCommands();
     populateChatCommands();
     distributeEvents();
+    channel = null;
 
   }
 
@@ -97,25 +99,6 @@ public class VoiceProducer {
   private static void populateVoiceCommands() {
 
 
-    VOICECOMMANDS.put("play imperial march", event -> {
-      VoiceChannel channel = gatewayClient.getChannelById(Snowflake.of("860243639253860376"))
-          .cast(VoiceChannel.class).block();
-      Mono<Void> command = Mono.fromRunnable(() -> {
-        System.out.println("audio command initiating");
-        final AudioProvider provider = GuildAudioManager.of(channel.getGuildId()).getProvider();
-        // final VoiceConnection connection = channel.join(spec ->
-        // spec.setProvider(provider)).block();
-        final AudioPlayer trackPlayer = GuildAudioManager.of(channel.getGuildId()).getPlayer();
-        BotDriver.PLAYER_MANAGER.loadItem(
-            "https://www.youtube.com/watch?v=u7HF4JG1pOg&ab_channel=JohnWilliamsVEVO",
-            new TrackScheduler(trackPlayer));
-
-      });
-
-      command.subscribe();
-      return command;
-
-    });
 
     VOICECOMMANDS.put("stop", event -> {
       // GuildAudioManager.of(Snowflake.of("860243639253860376"));
@@ -145,7 +128,7 @@ public class VoiceProducer {
         // final VoiceConnection connection = channel.join(spec ->
         // spec.setProvider(provider)).block();
         final AudioPlayer trackPlayer = GuildAudioManager.of(channel.getGuildId()).getPlayer();
-        BotDriver.PLAYER_MANAGER.loadItem("UserAudios\\do_not_come.mp3",
+        PLAYER_MANAGER.loadItem("UserAudios\\do_not_come.mp3",
             new TrackScheduler(trackPlayer));
 
       });
@@ -164,7 +147,7 @@ public class VoiceProducer {
         // final VoiceConnection connection = channel.join(spec ->
         // spec.setProvider(provider)).block();
         final AudioPlayer trackPlayer = GuildAudioManager.of(channel.getGuildId()).getPlayer();
-        BotDriver.PLAYER_MANAGER.loadItem("UserAudios\\do_not_come.mp3",
+        PLAYER_MANAGER.loadItem("UserAudios\\do_not_come.mp3",
             new TrackScheduler(trackPlayer));
 
       });
@@ -183,7 +166,7 @@ public class VoiceProducer {
         // final VoiceConnection connection = channel.join(spec ->
         // spec.setProvider(provider)).block();
         final AudioPlayer trackPlayer = GuildAudioManager.of(channel.getGuildId()).getPlayer();
-        BotDriver.PLAYER_MANAGER.loadItem("UserAudios\\do_not_come.mp3",
+        PLAYER_MANAGER.loadItem("UserAudios\\do_not_come.mp3",
             new TrackScheduler(trackPlayer));
 
       });
@@ -202,7 +185,7 @@ public class VoiceProducer {
         // final VoiceConnection connection = channel.join(spec ->
         // spec.setProvider(provider)).block();
         final AudioPlayer trackPlayer = GuildAudioManager.of(channel.getGuildId()).getPlayer();
-        BotDriver.PLAYER_MANAGER.loadItem("UserAudios\\do_not_come.mp3",
+        PLAYER_MANAGER.loadItem("UserAudios\\do_not_come.mp3",
             new TrackScheduler(trackPlayer));
 
       });
@@ -221,7 +204,7 @@ public class VoiceProducer {
         // final VoiceConnection connection = channel.join(spec ->
         // spec.setProvider(provider)).block();
         final AudioPlayer trackPlayer = GuildAudioManager.of(channel.getGuildId()).getPlayer();
-        BotDriver.PLAYER_MANAGER.loadItem("UserAudios\\I'm_gonna_come.mp3",
+        PLAYER_MANAGER.loadItem("UserAudios\\I'm_gonna_come.mp3",
             new TrackScheduler(trackPlayer));
 
       });
@@ -240,7 +223,7 @@ public class VoiceProducer {
         // final VoiceConnection connection = channel.join(spec ->
         // spec.setProvider(provider)).block();
         final AudioPlayer trackPlayer = GuildAudioManager.of(channel.getGuildId()).getPlayer();
-        BotDriver.PLAYER_MANAGER.loadItem("UserAudios\\I'm_gonna_come.mp3",
+        PLAYER_MANAGER.loadItem("UserAudios\\I'm_gonna_come.mp3",
             new TrackScheduler(trackPlayer));
 
       });
@@ -259,7 +242,7 @@ public class VoiceProducer {
         // final VoiceConnection connection = channel.join(spec ->
         // spec.setProvider(provider)).block();
         final AudioPlayer trackPlayer = GuildAudioManager.of(channel.getGuildId()).getPlayer();
-        BotDriver.PLAYER_MANAGER.loadItem("UserAudios\\kilometer.mp3",
+        PLAYER_MANAGER.loadItem("UserAudios\\kilometer.mp3",
             new TrackScheduler(trackPlayer));
 
       });
@@ -278,7 +261,7 @@ public class VoiceProducer {
         // final VoiceConnection connection = channel.join(spec ->
         // spec.setProvider(provider)).block();
         final AudioPlayer trackPlayer = GuildAudioManager.of(channel.getGuildId()).getPlayer();
-        BotDriver.PLAYER_MANAGER.loadItem("UserAudios\\kilometer.mp3",
+        PLAYER_MANAGER.loadItem("UserAudios\\kilometer.mp3",
             new TrackScheduler(trackPlayer));
 
       });
@@ -297,7 +280,7 @@ public class VoiceProducer {
         // final VoiceConnection connection = channel.join(spec ->
         // spec.setProvider(provider)).block();
         final AudioPlayer trackPlayer = GuildAudioManager.of(channel.getGuildId()).getPlayer();
-        BotDriver.PLAYER_MANAGER.loadItem("UserAudios\\wow.mp3", new TrackScheduler(trackPlayer));
+        PLAYER_MANAGER.loadItem("UserAudios\\wow.mp3", new TrackScheduler(trackPlayer));
 
       });
 
@@ -314,7 +297,7 @@ public class VoiceProducer {
         // final VoiceConnection connection = channel.join(spec ->
         // spec.setProvider(provider)).block();
         final AudioPlayer trackPlayer = GuildAudioManager.of(channel.getGuildId()).getPlayer();
-        BotDriver.PLAYER_MANAGER.loadItem("UserAudios\\better_luck_next_time.mp3",
+        PLAYER_MANAGER.loadItem("UserAudios\\better_luck_next_time.mp3",
             new TrackScheduler(trackPlayer));
 
       });
@@ -332,7 +315,7 @@ public class VoiceProducer {
         // final VoiceConnection connection = channel.join(spec ->
         // spec.setProvider(provider)).block();
         final AudioPlayer trackPlayer = GuildAudioManager.of(channel.getGuildId()).getPlayer();
-        BotDriver.PLAYER_MANAGER.loadItem("UserAudios\\better_luck_next_time.mp3",
+        PLAYER_MANAGER.loadItem("UserAudios\\better_luck_next_time.mp3",
             new TrackScheduler(trackPlayer));
 
       });
@@ -350,7 +333,7 @@ public class VoiceProducer {
         // final VoiceConnection connection = channel.join(spec ->
         // spec.setProvider(provider)).block();
         final AudioPlayer trackPlayer = GuildAudioManager.of(channel.getGuildId()).getPlayer();
-        BotDriver.PLAYER_MANAGER.loadItem("UserAudios\\oh_my_god.mp3",
+        PLAYER_MANAGER.loadItem("UserAudios\\oh_my_god.mp3",
             new TrackScheduler(trackPlayer));
 
       });
@@ -369,7 +352,7 @@ public class VoiceProducer {
         // final VoiceConnection connection = channel.join(spec ->
         // spec.setProvider(provider)).block();
         final AudioPlayer trackPlayer = GuildAudioManager.of(channel.getGuildId()).getPlayer();
-        BotDriver.PLAYER_MANAGER.loadItem("UserAudios\\based.mp3", new TrackScheduler(trackPlayer));
+        PLAYER_MANAGER.loadItem("UserAudios\\based.mp3", new TrackScheduler(trackPlayer));
 
       });
 
@@ -387,7 +370,7 @@ public class VoiceProducer {
         // final VoiceConnection connection = channel.join(spec ->
         // spec.setProvider(provider)).block();
         final AudioPlayer trackPlayer = GuildAudioManager.of(channel.getGuildId()).getPlayer();
-        BotDriver.PLAYER_MANAGER.loadItem("UserAudios\\based.mp3", new TrackScheduler(trackPlayer));
+        PLAYER_MANAGER.loadItem("UserAudios\\based.mp3", new TrackScheduler(trackPlayer));
 
       });
 
@@ -405,7 +388,7 @@ public class VoiceProducer {
         // final VoiceConnection connection = channel.join(spec ->
         // spec.setProvider(provider)).block();
         final AudioPlayer trackPlayer = GuildAudioManager.of(channel.getGuildId()).getPlayer();
-        BotDriver.PLAYER_MANAGER.loadItem("UserAudios\\oh_shit.mp3",
+        PLAYER_MANAGER.loadItem("UserAudios\\oh_shit.mp3",
             new TrackScheduler(trackPlayer));
 
       });
@@ -424,7 +407,7 @@ public class VoiceProducer {
         // final VoiceConnection connection = channel.join(spec ->
         // spec.setProvider(provider)).block();
         final AudioPlayer trackPlayer = GuildAudioManager.of(channel.getGuildId()).getPlayer();
-        BotDriver.PLAYER_MANAGER.loadItem("UserAudios\\oh_shit.mp3",
+        PLAYER_MANAGER.loadItem("UserAudios\\oh_shit.mp3",
             new TrackScheduler(trackPlayer));
 
       });
@@ -443,7 +426,7 @@ public class VoiceProducer {
         // final VoiceConnection connection = channel.join(spec ->
         // spec.setProvider(provider)).block();
         final AudioPlayer trackPlayer = GuildAudioManager.of(channel.getGuildId()).getPlayer();
-        BotDriver.PLAYER_MANAGER.loadItem("UserAudios\\oh_shit.mp3",
+        PLAYER_MANAGER.loadItem("UserAudios\\oh_shit.mp3",
             new TrackScheduler(trackPlayer));
 
       });
@@ -462,7 +445,7 @@ public class VoiceProducer {
         // final VoiceConnection connection = channel.join(spec ->
         // spec.setProvider(provider)).block();
         final AudioPlayer trackPlayer = GuildAudioManager.of(channel.getGuildId()).getPlayer();
-        BotDriver.PLAYER_MANAGER.loadItem("UserAudios\\holy_shit.mp3",
+        PLAYER_MANAGER.loadItem("UserAudios\\holy_shit.mp3",
             new TrackScheduler(trackPlayer));
 
       });
@@ -482,7 +465,7 @@ public class VoiceProducer {
         // final VoiceConnection connection = channel.join(spec ->
         // spec.setProvider(provider)).block();
         final AudioPlayer trackPlayer = GuildAudioManager.of(channel.getGuildId()).getPlayer();
-        BotDriver.PLAYER_MANAGER.loadItem("UserAudios\\holy_shit.mp3",
+        PLAYER_MANAGER.loadItem("UserAudios\\holy_shit.mp3",
             new TrackScheduler(trackPlayer));
 
       });
@@ -501,7 +484,7 @@ public class VoiceProducer {
         // final VoiceConnection connection = channel.join(spec ->
         // spec.setProvider(provider)).block();
         final AudioPlayer trackPlayer = GuildAudioManager.of(channel.getGuildId()).getPlayer();
-        BotDriver.PLAYER_MANAGER.loadItem("UserAudios\\holy_shit.mp3",
+        PLAYER_MANAGER.loadItem("UserAudios\\holy_shit.mp3",
             new TrackScheduler(trackPlayer));
 
       });
@@ -520,7 +503,7 @@ public class VoiceProducer {
         // final VoiceConnection connection = channel.join(spec ->
         // spec.setProvider(provider)).block();
         final AudioPlayer trackPlayer = GuildAudioManager.of(channel.getGuildId()).getPlayer();
-        BotDriver.PLAYER_MANAGER.loadItem("UserAudios\\do_you_understand.mp3",
+        PLAYER_MANAGER.loadItem("UserAudios\\do_you_understand.mp3",
             new TrackScheduler(trackPlayer));
 
       });
@@ -540,7 +523,7 @@ public class VoiceProducer {
         // final VoiceConnection connection = channel.join(spec ->
         // spec.setProvider(provider)).block();
         final AudioPlayer trackPlayer = GuildAudioManager.of(channel.getGuildId()).getPlayer();
-        BotDriver.PLAYER_MANAGER.loadItem("UserAudios\\kill_da_hoe",
+        PLAYER_MANAGER.loadItem("UserAudios\\kill_da_hoe",
             new TrackScheduler(trackPlayer));
 
       });
@@ -559,7 +542,7 @@ public class VoiceProducer {
         // final VoiceConnection connection = channel.join(spec ->
         // spec.setProvider(provider)).block();
         final AudioPlayer trackPlayer = GuildAudioManager.of(channel.getGuildId()).getPlayer();
-        BotDriver.PLAYER_MANAGER.loadItem("UserAudios\\kill_da_hoe.mp3",
+        PLAYER_MANAGER.loadItem("UserAudios\\kill_da_hoe.mp3",
             new TrackScheduler(trackPlayer));
 
       });
@@ -580,7 +563,7 @@ public class VoiceProducer {
         // final VoiceConnection connection = channel.join(spec ->
         // spec.setProvider(provider)).block();
         final AudioPlayer trackPlayer = GuildAudioManager.of(channel.getGuildId()).getPlayer();
-        BotDriver.PLAYER_MANAGER.loadItem("UserAudios\\kill_da_hoe.mp3",
+        PLAYER_MANAGER.loadItem("UserAudios\\kill_da_hoe.mp3",
             new TrackScheduler(trackPlayer));
 
       });
@@ -601,7 +584,7 @@ public class VoiceProducer {
         // final VoiceConnection connection = channel.join(spec ->
         // spec.setProvider(provider)).block();
         final AudioPlayer trackPlayer = GuildAudioManager.of(channel.getGuildId()).getPlayer();
-        BotDriver.PLAYER_MANAGER.loadItem("UserAudios\\kill_da_hoe.mp3",
+        PLAYER_MANAGER.loadItem("UserAudios\\kill_da_hoe.mp3",
             new TrackScheduler(trackPlayer));
 
       });
@@ -622,7 +605,7 @@ public class VoiceProducer {
         // final VoiceConnection connection = channel.join(spec ->
         // spec.setProvider(provider)).block();
         final AudioPlayer trackPlayer = GuildAudioManager.of(channel.getGuildId()).getPlayer();
-        BotDriver.PLAYER_MANAGER.loadItem("UserAudios\\I_missed.mp3",
+        PLAYER_MANAGER.loadItem("UserAudios\\I_missed.mp3",
             new TrackScheduler(trackPlayer));
 
       });
@@ -644,7 +627,7 @@ public class VoiceProducer {
         // final VoiceConnection connection = channel.join(spec ->
         // spec.setProvider(provider)).block();
         final AudioPlayer trackPlayer = GuildAudioManager.of(channel.getGuildId()).getPlayer();
-        BotDriver.PLAYER_MANAGER.loadItem("UserAudios\\time_stop.mp3",
+        PLAYER_MANAGER.loadItem("UserAudios\\time_stop.mp3",
             new TrackScheduler(trackPlayer));
 
       });
@@ -665,7 +648,7 @@ public class VoiceProducer {
         // final VoiceConnection connection = channel.join(spec ->
         // spec.setProvider(provider)).block();
         final AudioPlayer trackPlayer = GuildAudioManager.of(channel.getGuildId()).getPlayer();
-        BotDriver.PLAYER_MANAGER.loadItem("UserAudios\\mountain_dew.mp3",
+        PLAYER_MANAGER.loadItem("UserAudios\\mountain_dew.mp3",
             new TrackScheduler(trackPlayer));
 
       });
@@ -686,7 +669,7 @@ public class VoiceProducer {
         // final VoiceConnection connection = channel.join(spec ->
         // spec.setProvider(provider)).block();
         final AudioPlayer trackPlayer = GuildAudioManager.of(channel.getGuildId()).getPlayer();
-        BotDriver.PLAYER_MANAGER.loadItem("UserAudios\\mountain_dew.mp3",
+        PLAYER_MANAGER.loadItem("UserAudios\\mountain_dew.mp3",
             new TrackScheduler(trackPlayer));
 
       });
@@ -707,7 +690,7 @@ public class VoiceProducer {
         // final VoiceConnection connection = channel.join(spec ->
         // spec.setProvider(provider)).block();
         final AudioPlayer trackPlayer = GuildAudioManager.of(channel.getGuildId()).getPlayer();
-        BotDriver.PLAYER_MANAGER.loadItem("UserAudios\\blasting.mp3",
+        PLAYER_MANAGER.loadItem("UserAudios\\blasting.mp3",
             new TrackScheduler(trackPlayer));
 
       });
@@ -728,7 +711,7 @@ public class VoiceProducer {
         // final VoiceConnection connection = channel.join(spec ->
         // spec.setProvider(provider)).block();
         final AudioPlayer trackPlayer = GuildAudioManager.of(channel.getGuildId()).getPlayer();
-        BotDriver.PLAYER_MANAGER.loadItem("UserAudios\\no_use.mp3",
+        PLAYER_MANAGER.loadItem("UserAudios\\no_use.mp3",
             new TrackScheduler(trackPlayer));
 
       });
@@ -749,7 +732,7 @@ public class VoiceProducer {
         // final VoiceConnection connection = channel.join(spec ->
         // spec.setProvider(provider)).block();
         final AudioPlayer trackPlayer = GuildAudioManager.of(channel.getGuildId()).getPlayer();
-        BotDriver.PLAYER_MANAGER.loadItem("UserAudios\\Barely_made_it.mp3",
+        PLAYER_MANAGER.loadItem("UserAudios\\Barely_made_it.mp3",
             new TrackScheduler(trackPlayer));
 
       });
@@ -762,13 +745,13 @@ public class VoiceProducer {
 
     VOICECOMMANDS.put("metal gear", event -> {
       VoiceChannel channel = gatewayClient.getChannelById(Snowflake.of("860243639253860376"))
-              .cast(VoiceChannel.class).block();
+          .cast(VoiceChannel.class).block();
       Mono<Void> command = Mono.fromRunnable(() -> {
         System.out.println("audio command initiating");
         final AudioProvider provider = GuildAudioManager.of(channel.getGuildId()).getProvider();
         final AudioPlayer trackPlayer = GuildAudioManager.of(channel.getGuildId()).getPlayer();
-        BotDriver.PLAYER_MANAGER.loadItem("UserAudios\\metal_gear.mp3",
-                new TrackScheduler(trackPlayer));
+        PLAYER_MANAGER.loadItem("UserAudios\\metal_gear.mp3",
+            new TrackScheduler(trackPlayer));
       });
 
       command.subscribe();
@@ -777,13 +760,13 @@ public class VoiceProducer {
 
     VOICECOMMANDS.put("nanomachines", event -> {
       VoiceChannel channel = gatewayClient.getChannelById(Snowflake.of("860243639253860376"))
-              .cast(VoiceChannel.class).block();
+          .cast(VoiceChannel.class).block();
       Mono<Void> command = Mono.fromRunnable(() -> {
         System.out.println("audio command initiating");
         final AudioProvider provider = GuildAudioManager.of(channel.getGuildId()).getProvider();
         final AudioPlayer trackPlayer = GuildAudioManager.of(channel.getGuildId()).getPlayer();
-        BotDriver.PLAYER_MANAGER.loadItem("UserAudios\\nanomachines.mp3",
-                new TrackScheduler(trackPlayer));
+        PLAYER_MANAGER.loadItem("UserAudios\\nanomachines.mp3",
+            new TrackScheduler(trackPlayer));
       });
 
       command.subscribe();
@@ -792,13 +775,13 @@ public class VoiceProducer {
 
     VOICECOMMANDS.put("psycho mantis", event -> {
       VoiceChannel channel = gatewayClient.getChannelById(Snowflake.of("860243639253860376"))
-              .cast(VoiceChannel.class).block();
+          .cast(VoiceChannel.class).block();
       Mono<Void> command = Mono.fromRunnable(() -> {
         System.out.println("audio command initiating");
         final AudioProvider provider = GuildAudioManager.of(channel.getGuildId()).getProvider();
         final AudioPlayer trackPlayer = GuildAudioManager.of(channel.getGuildId()).getPlayer();
-        BotDriver.PLAYER_MANAGER.loadItem("UserAudios\\psychomantis.mp3",
-                new TrackScheduler(trackPlayer));
+        PLAYER_MANAGER.loadItem("UserAudios\\psychomantis.mp3",
+            new TrackScheduler(trackPlayer));
       });
 
       command.subscribe();
@@ -807,13 +790,13 @@ public class VoiceProducer {
 
     VOICECOMMANDS.put("revolution", event -> {
       VoiceChannel channel = gatewayClient.getChannelById(Snowflake.of("860243639253860376"))
-              .cast(VoiceChannel.class).block();
+          .cast(VoiceChannel.class).block();
       Mono<Void> command = Mono.fromRunnable(() -> {
         System.out.println("audio command initiating");
         final AudioProvider provider = GuildAudioManager.of(channel.getGuildId()).getProvider();
         final AudioPlayer trackPlayer = GuildAudioManager.of(channel.getGuildId()).getPlayer();
-        BotDriver.PLAYER_MANAGER.loadItem("UserAudios\\revolution.mp3",
-                new TrackScheduler(trackPlayer));
+        PLAYER_MANAGER.loadItem("UserAudios\\revolution.mp3",
+            new TrackScheduler(trackPlayer));
       });
 
       command.subscribe();
@@ -822,13 +805,13 @@ public class VoiceProducer {
 
     VOICECOMMANDS.put("they want to", event -> {
       VoiceChannel channel = gatewayClient.getChannelById(Snowflake.of("860243639253860376"))
-              .cast(VoiceChannel.class).block();
+          .cast(VoiceChannel.class).block();
       Mono<Void> command = Mono.fromRunnable(() -> {
         System.out.println("audio command initiating");
         final AudioProvider provider = GuildAudioManager.of(channel.getGuildId()).getProvider();
         final AudioPlayer trackPlayer = GuildAudioManager.of(channel.getGuildId()).getPlayer();
-        BotDriver.PLAYER_MANAGER.loadItem("UserAudios\\who's_they.mp3",
-                new TrackScheduler(trackPlayer));
+        PLAYER_MANAGER.loadItem("UserAudios\\who's_they.mp3",
+            new TrackScheduler(trackPlayer));
       });
 
       command.subscribe();
@@ -837,14 +820,14 @@ public class VoiceProducer {
 
 
 
-
   }
 
   private static void populateChatCommands() {
     CHATCOMMANDS.put("join", event -> {
+      System.out.println("reached");
       final Member member = event.getMember().orElse(null);
       final VoiceState voiceState = member.getVoiceState().block();
-      final VoiceChannel channel = voiceState.getChannel().block();
+      channel = voiceState.getChannel().block();
       GuildAudioManager.of(channel.getGuildId());
       final AudioProvider provider = GuildAudioManager.of(channel.getGuildId()).getProvider();
       Mono<Void> setProvider =
