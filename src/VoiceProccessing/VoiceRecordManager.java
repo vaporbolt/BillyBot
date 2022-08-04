@@ -48,7 +48,7 @@ import reactor.core.publisher.Mono;
 public class VoiceRecordManager implements Runnable {
 
 	public static boolean exists = false;
-	public static final String AUDIODIRECTORY = "DiscordAudioStreamer\\recordings"; // holds converted .wav files
+	public static final String AUDIODIRECTORY = "DiscordAudioStreamer/recordings"; // holds converted .wav files
 	public static final File AUDIOFOLDER = new File(AUDIODIRECTORY);
 	private SpeechClient speech; // the google Speech Client needed to use api calls.
 	private static final HashMap<String, Command> VOICECOMMANDS = new HashMap<String, Command>();

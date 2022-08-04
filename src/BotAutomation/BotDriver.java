@@ -50,7 +50,6 @@ import discord4j.voice.VoiceConnection;
 import reactor.core.publisher.Mono;
 
 public class BotDriver {
-
   private static final HashMap<String, Command> commands = new HashMap<String, Command>();
   private static Set<String> commandSet;
   private static GatewayDiscordClient gatewayClient;
@@ -283,7 +282,7 @@ public class BotDriver {
         final AudioProvider provider = GuildAudioManager.of(channel.getGuildId()).getProvider();
         // final VoiceConnection connection = channel.join(spec ->
         // spec.setProvider(provider)).block();
-        System.out.println("audio command iniating");
+        System.out.println("audio command initiating");
         final AudioPlayer trackPlayer = GuildAudioManager.of(channel.getGuildId()).getPlayer();
         PLAYER_MANAGER.loadItem(
             "https://www.youtube.com/watch?v=u7HF4JG1pOg&ab_channel=JohnWilliamsVEVO",

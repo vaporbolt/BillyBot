@@ -101,7 +101,7 @@ public class VoiceProducer {
       VoiceChannel channel = gatewayClient.getChannelById(Snowflake.of("860243639253860376"))
           .cast(VoiceChannel.class).block();
       Mono<Void> command = Mono.fromRunnable(() -> {
-        System.out.println("audio command iniating");
+        System.out.println("audio command initiating");
         final AudioProvider provider = GuildAudioManager.of(channel.getGuildId()).getProvider();
         // final VoiceConnection connection = channel.join(spec ->
         // spec.setProvider(provider)).block();
@@ -125,7 +125,7 @@ public class VoiceProducer {
         final AudioProvider provider = GuildAudioManager.of(channel.getGuildId()).getProvider();
         // final VoiceConnection connection = channel.join(spec ->
         // spec.setProvider(provider)).block();
-        System.out.println("audio command iniating");
+        System.out.println("audio command initiating");
         AudioPlayer trackPlayer = GuildAudioManager.of(channel.getGuildId()).getPlayer();
         trackPlayer.stopTrack();
 
@@ -140,7 +140,7 @@ public class VoiceProducer {
       VoiceChannel channel = gatewayClient.getChannelById(Snowflake.of("860243639253860376"))
           .cast(VoiceChannel.class).block();
       Mono<Void> command = Mono.fromRunnable(() -> {
-        System.out.println("audio command iniating");
+        System.out.println("audio command initiating");
         final AudioProvider provider = GuildAudioManager.of(channel.getGuildId()).getProvider();
         // final VoiceConnection connection = channel.join(spec ->
         // spec.setProvider(provider)).block();
@@ -159,7 +159,7 @@ public class VoiceProducer {
       VoiceChannel channel = gatewayClient.getChannelById(Snowflake.of("860243639253860376"))
           .cast(VoiceChannel.class).block();
       Mono<Void> command = Mono.fromRunnable(() -> {
-        System.out.println("audio command iniating");
+        System.out.println("audio command initiating");
         final AudioProvider provider = GuildAudioManager.of(channel.getGuildId()).getProvider();
         // final VoiceConnection connection = channel.join(spec ->
         // spec.setProvider(provider)).block();
@@ -178,7 +178,7 @@ public class VoiceProducer {
       VoiceChannel channel = gatewayClient.getChannelById(Snowflake.of("860243639253860376"))
           .cast(VoiceChannel.class).block();
       Mono<Void> command = Mono.fromRunnable(() -> {
-        System.out.println("audio command iniating");
+        System.out.println("audio command initiating");
         final AudioProvider provider = GuildAudioManager.of(channel.getGuildId()).getProvider();
         // final VoiceConnection connection = channel.join(spec ->
         // spec.setProvider(provider)).block();
@@ -197,7 +197,7 @@ public class VoiceProducer {
       VoiceChannel channel = gatewayClient.getChannelById(Snowflake.of("860243639253860376"))
           .cast(VoiceChannel.class).block();
       Mono<Void> command = Mono.fromRunnable(() -> {
-        System.out.println("audio command iniating");
+        System.out.println("audio command initiating");
         final AudioProvider provider = GuildAudioManager.of(channel.getGuildId()).getProvider();
         // final VoiceConnection connection = channel.join(spec ->
         // spec.setProvider(provider)).block();
@@ -216,7 +216,7 @@ public class VoiceProducer {
       VoiceChannel channel = gatewayClient.getChannelById(Snowflake.of("860243639253860376"))
           .cast(VoiceChannel.class).block();
       Mono<Void> command = Mono.fromRunnable(() -> {
-        System.out.println("audio command iniating");
+        System.out.println("audio command initiating");
         final AudioProvider provider = GuildAudioManager.of(channel.getGuildId()).getProvider();
         // final VoiceConnection connection = channel.join(spec ->
         // spec.setProvider(provider)).block();
@@ -235,7 +235,7 @@ public class VoiceProducer {
       VoiceChannel channel = gatewayClient.getChannelById(Snowflake.of("860243639253860376"))
           .cast(VoiceChannel.class).block();
       Mono<Void> command = Mono.fromRunnable(() -> {
-        System.out.println("audio command iniating");
+        System.out.println("audio command initiating");
         final AudioProvider provider = GuildAudioManager.of(channel.getGuildId()).getProvider();
         // final VoiceConnection connection = channel.join(spec ->
         // spec.setProvider(provider)).block();
@@ -254,7 +254,7 @@ public class VoiceProducer {
       VoiceChannel channel = gatewayClient.getChannelById(Snowflake.of("860243639253860376"))
           .cast(VoiceChannel.class).block();
       Mono<Void> command = Mono.fromRunnable(() -> {
-        System.out.println("audio command iniating");
+        System.out.println("audio command initiating");
         final AudioProvider provider = GuildAudioManager.of(channel.getGuildId()).getProvider();
         // final VoiceConnection connection = channel.join(spec ->
         // spec.setProvider(provider)).block();
@@ -273,7 +273,7 @@ public class VoiceProducer {
       VoiceChannel channel = gatewayClient.getChannelById(Snowflake.of("860243639253860376"))
           .cast(VoiceChannel.class).block();
       Mono<Void> command = Mono.fromRunnable(() -> {
-        System.out.println("audio command iniating");
+        System.out.println("audio command initiating");
         final AudioProvider provider = GuildAudioManager.of(channel.getGuildId()).getProvider();
         // final VoiceConnection connection = channel.join(spec ->
         // spec.setProvider(provider)).block();
@@ -292,7 +292,7 @@ public class VoiceProducer {
       VoiceChannel channel = gatewayClient.getChannelById(Snowflake.of("860243639253860376"))
           .cast(VoiceChannel.class).block();
       Mono<Void> command = Mono.fromRunnable(() -> {
-        System.out.println("audio command iniating");
+        System.out.println("audio command initiating");
         final AudioProvider provider = GuildAudioManager.of(channel.getGuildId()).getProvider();
         // final VoiceConnection connection = channel.join(spec ->
         // spec.setProvider(provider)).block();
@@ -309,7 +309,7 @@ public class VoiceProducer {
       VoiceChannel channel = gatewayClient.getChannelById(Snowflake.of("860243639253860376"))
           .cast(VoiceChannel.class).block();
       Mono<Void> command = Mono.fromRunnable(() -> {
-        System.out.println("audio command iniating");
+        System.out.println("audio command initiating");
         final AudioProvider provider = GuildAudioManager.of(channel.getGuildId()).getProvider();
         // final VoiceConnection connection = channel.join(spec ->
         // spec.setProvider(provider)).block();
@@ -327,7 +327,7 @@ public class VoiceProducer {
       VoiceChannel channel = gatewayClient.getChannelById(Snowflake.of("860243639253860376"))
           .cast(VoiceChannel.class).block();
       Mono<Void> command = Mono.fromRunnable(() -> {
-        System.out.println("audio command iniating");
+        System.out.println("audio command initiating");
         final AudioProvider provider = GuildAudioManager.of(channel.getGuildId()).getProvider();
         // final VoiceConnection connection = channel.join(spec ->
         // spec.setProvider(provider)).block();
@@ -345,7 +345,7 @@ public class VoiceProducer {
       VoiceChannel channel = gatewayClient.getChannelById(Snowflake.of("860243639253860376"))
           .cast(VoiceChannel.class).block();
       Mono<Void> command = Mono.fromRunnable(() -> {
-        System.out.println("audio command iniating");
+        System.out.println("audio command initiating");
         final AudioProvider provider = GuildAudioManager.of(channel.getGuildId()).getProvider();
         // final VoiceConnection connection = channel.join(spec ->
         // spec.setProvider(provider)).block();
@@ -364,7 +364,7 @@ public class VoiceProducer {
       VoiceChannel channel = gatewayClient.getChannelById(Snowflake.of("860243639253860376"))
           .cast(VoiceChannel.class).block();
       Mono<Void> command = Mono.fromRunnable(() -> {
-        System.out.println("audio command iniating");
+        System.out.println("audio command initiating");
         final AudioProvider provider = GuildAudioManager.of(channel.getGuildId()).getProvider();
         // final VoiceConnection connection = channel.join(spec ->
         // spec.setProvider(provider)).block();
@@ -382,7 +382,7 @@ public class VoiceProducer {
       VoiceChannel channel = gatewayClient.getChannelById(Snowflake.of("860243639253860376"))
           .cast(VoiceChannel.class).block();
       Mono<Void> command = Mono.fromRunnable(() -> {
-        System.out.println("audio command iniating");
+        System.out.println("audio command initiating");
         final AudioProvider provider = GuildAudioManager.of(channel.getGuildId()).getProvider();
         // final VoiceConnection connection = channel.join(spec ->
         // spec.setProvider(provider)).block();
@@ -400,7 +400,7 @@ public class VoiceProducer {
       VoiceChannel channel = gatewayClient.getChannelById(Snowflake.of("860243639253860376"))
           .cast(VoiceChannel.class).block();
       Mono<Void> command = Mono.fromRunnable(() -> {
-        System.out.println("audio command iniating");
+        System.out.println("audio command initiating");
         final AudioProvider provider = GuildAudioManager.of(channel.getGuildId()).getProvider();
         // final VoiceConnection connection = channel.join(spec ->
         // spec.setProvider(provider)).block();
@@ -419,7 +419,7 @@ public class VoiceProducer {
       VoiceChannel channel = gatewayClient.getChannelById(Snowflake.of("860243639253860376"))
           .cast(VoiceChannel.class).block();
       Mono<Void> command = Mono.fromRunnable(() -> {
-        System.out.println("audio command iniating");
+        System.out.println("audio command initiating");
         final AudioProvider provider = GuildAudioManager.of(channel.getGuildId()).getProvider();
         // final VoiceConnection connection = channel.join(spec ->
         // spec.setProvider(provider)).block();
@@ -438,7 +438,7 @@ public class VoiceProducer {
       VoiceChannel channel = gatewayClient.getChannelById(Snowflake.of("860243639253860376"))
           .cast(VoiceChannel.class).block();
       Mono<Void> command = Mono.fromRunnable(() -> {
-        System.out.println("audio command iniating");
+        System.out.println("audio command initiating");
         final AudioProvider provider = GuildAudioManager.of(channel.getGuildId()).getProvider();
         // final VoiceConnection connection = channel.join(spec ->
         // spec.setProvider(provider)).block();
@@ -457,7 +457,7 @@ public class VoiceProducer {
       VoiceChannel channel = gatewayClient.getChannelById(Snowflake.of("860243639253860376"))
           .cast(VoiceChannel.class).block();
       Mono<Void> command = Mono.fromRunnable(() -> {
-        System.out.println("audio command iniating");
+        System.out.println("audio command initiating");
         final AudioProvider provider = GuildAudioManager.of(channel.getGuildId()).getProvider();
         // final VoiceConnection connection = channel.join(spec ->
         // spec.setProvider(provider)).block();
@@ -477,7 +477,7 @@ public class VoiceProducer {
       VoiceChannel channel = gatewayClient.getChannelById(Snowflake.of("860243639253860376"))
           .cast(VoiceChannel.class).block();
       Mono<Void> command = Mono.fromRunnable(() -> {
-        System.out.println("audio command iniating");
+        System.out.println("audio command initiating");
         final AudioProvider provider = GuildAudioManager.of(channel.getGuildId()).getProvider();
         // final VoiceConnection connection = channel.join(spec ->
         // spec.setProvider(provider)).block();
@@ -496,7 +496,7 @@ public class VoiceProducer {
       VoiceChannel channel = gatewayClient.getChannelById(Snowflake.of("860243639253860376"))
           .cast(VoiceChannel.class).block();
       Mono<Void> command = Mono.fromRunnable(() -> {
-        System.out.println("audio command iniating");
+        System.out.println("audio command initiating");
         final AudioProvider provider = GuildAudioManager.of(channel.getGuildId()).getProvider();
         // final VoiceConnection connection = channel.join(spec ->
         // spec.setProvider(provider)).block();
@@ -515,7 +515,7 @@ public class VoiceProducer {
       VoiceChannel channel = gatewayClient.getChannelById(Snowflake.of("860243639253860376"))
           .cast(VoiceChannel.class).block();
       Mono<Void> command = Mono.fromRunnable(() -> {
-        System.out.println("audio command iniating");
+        System.out.println("audio command initiating");
         final AudioProvider provider = GuildAudioManager.of(channel.getGuildId()).getProvider();
         // final VoiceConnection connection = channel.join(spec ->
         // spec.setProvider(provider)).block();
@@ -535,7 +535,7 @@ public class VoiceProducer {
       VoiceChannel channel = gatewayClient.getChannelById(Snowflake.of("860243639253860376"))
           .cast(VoiceChannel.class).block();
       Mono<Void> command = Mono.fromRunnable(() -> {
-        System.out.println("audio command iniating");
+        System.out.println("audio command initiating");
         final AudioProvider provider = GuildAudioManager.of(channel.getGuildId()).getProvider();
         // final VoiceConnection connection = channel.join(spec ->
         // spec.setProvider(provider)).block();
@@ -554,7 +554,7 @@ public class VoiceProducer {
       VoiceChannel channel = gatewayClient.getChannelById(Snowflake.of("860243639253860376"))
           .cast(VoiceChannel.class).block();
       Mono<Void> command = Mono.fromRunnable(() -> {
-        System.out.println("audio command iniating");
+        System.out.println("audio command initiating");
         final AudioProvider provider = GuildAudioManager.of(channel.getGuildId()).getProvider();
         // final VoiceConnection connection = channel.join(spec ->
         // spec.setProvider(provider)).block();
@@ -575,7 +575,7 @@ public class VoiceProducer {
       VoiceChannel channel = gatewayClient.getChannelById(Snowflake.of("860243639253860376"))
           .cast(VoiceChannel.class).block();
       Mono<Void> command = Mono.fromRunnable(() -> {
-        System.out.println("audio command iniating");
+        System.out.println("audio command initiating");
         final AudioProvider provider = GuildAudioManager.of(channel.getGuildId()).getProvider();
         // final VoiceConnection connection = channel.join(spec ->
         // spec.setProvider(provider)).block();
@@ -596,7 +596,7 @@ public class VoiceProducer {
       VoiceChannel channel = gatewayClient.getChannelById(Snowflake.of("860243639253860376"))
           .cast(VoiceChannel.class).block();
       Mono<Void> command = Mono.fromRunnable(() -> {
-        System.out.println("audio command iniating");
+        System.out.println("audio command initiating");
         final AudioProvider provider = GuildAudioManager.of(channel.getGuildId()).getProvider();
         // final VoiceConnection connection = channel.join(spec ->
         // spec.setProvider(provider)).block();
@@ -617,7 +617,7 @@ public class VoiceProducer {
       VoiceChannel channel = gatewayClient.getChannelById(Snowflake.of("860243639253860376"))
           .cast(VoiceChannel.class).block();
       Mono<Void> command = Mono.fromRunnable(() -> {
-        System.out.println("audio command iniating");
+        System.out.println("audio command initiating");
         final AudioProvider provider = GuildAudioManager.of(channel.getGuildId()).getProvider();
         // final VoiceConnection connection = channel.join(spec ->
         // spec.setProvider(provider)).block();
@@ -639,7 +639,7 @@ public class VoiceProducer {
       VoiceChannel channel = gatewayClient.getChannelById(Snowflake.of("860243639253860376"))
           .cast(VoiceChannel.class).block();
       Mono<Void> command = Mono.fromRunnable(() -> {
-        System.out.println("audio command iniating");
+        System.out.println("audio command initiating");
         final AudioProvider provider = GuildAudioManager.of(channel.getGuildId()).getProvider();
         // final VoiceConnection connection = channel.join(spec ->
         // spec.setProvider(provider)).block();
@@ -660,7 +660,7 @@ public class VoiceProducer {
       VoiceChannel channel = gatewayClient.getChannelById(Snowflake.of("860243639253860376"))
           .cast(VoiceChannel.class).block();
       Mono<Void> command = Mono.fromRunnable(() -> {
-        System.out.println("audio command iniating");
+        System.out.println("audio command initiating");
         final AudioProvider provider = GuildAudioManager.of(channel.getGuildId()).getProvider();
         // final VoiceConnection connection = channel.join(spec ->
         // spec.setProvider(provider)).block();
@@ -681,7 +681,7 @@ public class VoiceProducer {
       VoiceChannel channel = gatewayClient.getChannelById(Snowflake.of("860243639253860376"))
           .cast(VoiceChannel.class).block();
       Mono<Void> command = Mono.fromRunnable(() -> {
-        System.out.println("audio command iniating");
+        System.out.println("audio command initiating");
         final AudioProvider provider = GuildAudioManager.of(channel.getGuildId()).getProvider();
         // final VoiceConnection connection = channel.join(spec ->
         // spec.setProvider(provider)).block();
@@ -702,7 +702,7 @@ public class VoiceProducer {
       VoiceChannel channel = gatewayClient.getChannelById(Snowflake.of("860243639253860376"))
           .cast(VoiceChannel.class).block();
       Mono<Void> command = Mono.fromRunnable(() -> {
-        System.out.println("audio command iniating");
+        System.out.println("audio command initiating");
         final AudioProvider provider = GuildAudioManager.of(channel.getGuildId()).getProvider();
         // final VoiceConnection connection = channel.join(spec ->
         // spec.setProvider(provider)).block();
@@ -723,7 +723,7 @@ public class VoiceProducer {
       VoiceChannel channel = gatewayClient.getChannelById(Snowflake.of("860243639253860376"))
           .cast(VoiceChannel.class).block();
       Mono<Void> command = Mono.fromRunnable(() -> {
-        System.out.println("audio command iniating");
+        System.out.println("audio command initiating");
         final AudioProvider provider = GuildAudioManager.of(channel.getGuildId()).getProvider();
         // final VoiceConnection connection = channel.join(spec ->
         // spec.setProvider(provider)).block();
@@ -744,7 +744,7 @@ public class VoiceProducer {
       VoiceChannel channel = gatewayClient.getChannelById(Snowflake.of("860243639253860376"))
           .cast(VoiceChannel.class).block();
       Mono<Void> command = Mono.fromRunnable(() -> {
-        System.out.println("audio command iniating");
+        System.out.println("audio command initiating");
         final AudioProvider provider = GuildAudioManager.of(channel.getGuildId()).getProvider();
         // final VoiceConnection connection = channel.join(spec ->
         // spec.setProvider(provider)).block();
@@ -759,6 +759,82 @@ public class VoiceProducer {
       command.subscribe();
       return command;
     });
+
+    VOICECOMMANDS.put("metal gear", event -> {
+      VoiceChannel channel = gatewayClient.getChannelById(Snowflake.of("860243639253860376"))
+              .cast(VoiceChannel.class).block();
+      Mono<Void> command = Mono.fromRunnable(() -> {
+        System.out.println("audio command initiating");
+        final AudioProvider provider = GuildAudioManager.of(channel.getGuildId()).getProvider();
+        final AudioPlayer trackPlayer = GuildAudioManager.of(channel.getGuildId()).getPlayer();
+        BotDriver.PLAYER_MANAGER.loadItem("UserAudios\\metal_gear.mp3",
+                new TrackScheduler(trackPlayer));
+      });
+
+      command.subscribe();
+      return command;
+    });
+
+    VOICECOMMANDS.put("nanomachines", event -> {
+      VoiceChannel channel = gatewayClient.getChannelById(Snowflake.of("860243639253860376"))
+              .cast(VoiceChannel.class).block();
+      Mono<Void> command = Mono.fromRunnable(() -> {
+        System.out.println("audio command initiating");
+        final AudioProvider provider = GuildAudioManager.of(channel.getGuildId()).getProvider();
+        final AudioPlayer trackPlayer = GuildAudioManager.of(channel.getGuildId()).getPlayer();
+        BotDriver.PLAYER_MANAGER.loadItem("UserAudios\\nanomachines.mp3",
+                new TrackScheduler(trackPlayer));
+      });
+
+      command.subscribe();
+      return command;
+    });
+
+    VOICECOMMANDS.put("psycho mantis", event -> {
+      VoiceChannel channel = gatewayClient.getChannelById(Snowflake.of("860243639253860376"))
+              .cast(VoiceChannel.class).block();
+      Mono<Void> command = Mono.fromRunnable(() -> {
+        System.out.println("audio command initiating");
+        final AudioProvider provider = GuildAudioManager.of(channel.getGuildId()).getProvider();
+        final AudioPlayer trackPlayer = GuildAudioManager.of(channel.getGuildId()).getPlayer();
+        BotDriver.PLAYER_MANAGER.loadItem("UserAudios\\psychomantis.mp3",
+                new TrackScheduler(trackPlayer));
+      });
+
+      command.subscribe();
+      return command;
+    });
+
+    VOICECOMMANDS.put("revolution", event -> {
+      VoiceChannel channel = gatewayClient.getChannelById(Snowflake.of("860243639253860376"))
+              .cast(VoiceChannel.class).block();
+      Mono<Void> command = Mono.fromRunnable(() -> {
+        System.out.println("audio command initiating");
+        final AudioProvider provider = GuildAudioManager.of(channel.getGuildId()).getProvider();
+        final AudioPlayer trackPlayer = GuildAudioManager.of(channel.getGuildId()).getPlayer();
+        BotDriver.PLAYER_MANAGER.loadItem("UserAudios\\revolution.mp3",
+                new TrackScheduler(trackPlayer));
+      });
+
+      command.subscribe();
+      return command;
+    });
+
+    VOICECOMMANDS.put("they want to", event -> {
+      VoiceChannel channel = gatewayClient.getChannelById(Snowflake.of("860243639253860376"))
+              .cast(VoiceChannel.class).block();
+      Mono<Void> command = Mono.fromRunnable(() -> {
+        System.out.println("audio command initiating");
+        final AudioProvider provider = GuildAudioManager.of(channel.getGuildId()).getProvider();
+        final AudioPlayer trackPlayer = GuildAudioManager.of(channel.getGuildId()).getPlayer();
+        BotDriver.PLAYER_MANAGER.loadItem("UserAudios\\who's_they.mp3",
+                new TrackScheduler(trackPlayer));
+      });
+
+      command.subscribe();
+      return command;
+    });
+
 
 
 

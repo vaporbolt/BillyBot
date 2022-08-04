@@ -17,7 +17,7 @@ public interface Command {
 
 	/**
 	 * @param event the  Message event to react to. 
-	 * @return a Mono that executes a response upon subcription.
+	 * @return a Mono that executes a response upon subscription.
 	 */
 	Mono<Void> execute(MessageCreateEvent event);
 	

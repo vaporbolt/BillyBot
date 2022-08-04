@@ -152,7 +152,7 @@ client.on('messageCreate', async (message) => {
                 {
                     return;
                 }
-                fs.unlinkSync(`${filename}.pcm`) // ISSUE IS HERE FIX WHEN YOU WAKE UP
+                fs.unlinkSync(`${filename}.pcm`) //TODO ISSUE IS HERE FIX WHEN YOU WAKE UP
               }).on("error", function(err) {
 
                 return;
