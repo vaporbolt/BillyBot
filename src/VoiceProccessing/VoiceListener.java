@@ -181,6 +181,67 @@ public class VoiceListener{
 
 
     });
+    
+    commands.put("list voice commands", event ->
+     {
+       String text = "List of Commands:\n";
+       Set<String> commandSet = VoiceProducer.VOICECOMMANDS.keySet();
+       
+       for(String command: commandSet)
+       {
+         text+= command + "\n";
+       }
+       
+       Mono<Void> message = createMessage(event.getMessage().getChannelId(),text);
+       message.subscribe();
+       return message;
+       
+       
+    
+    });
+    
+    commands.put("remove voice command", event ->
+    {
+      
+      String content = event.getMessage().getContent();
+      String responseText = "";
+      
+      try
+      {
+        Mono<Void> message;
+        int commandIndex = content.indexOf(",") + 2;
+        String command = content.substring(commandIndex, content.length());
+        if(VoiceProducer.VOICECOMMANDS.get(command) != null)
+        {
+          VoiceProducer.VOICECOMMANDS.remove(command);
+          responseText+= "command succesfully removed";
+          // toDO: remove command from json file.
+          VoiceProducer.removeVoiceCommandFromJSON(command);
+        }
+        
+        else
+        {
+          responseText+= "command not found";
+        }
+        
+        message = createMessage(event.getMessage().getChannelId(),responseText);
+        message.subscribe();
+        return message;
+        
+      }
+      
+      catch(Exception e)
+      {
+        Mono<Void> message = createMessage(event.getMessage().getChannelId(),"Invalid syntax, please provide command after the ','");
+        message.subscribe();
+        return message;
+      }
+    
+      
+      
+   
+   });
+    
 
 
 

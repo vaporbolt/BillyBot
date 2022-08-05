@@ -329,5 +329,52 @@ public class VoiceProducer {
 
 
   }
+  
+  /**
+   * should only be called when the command's existence is validated.
+   * Removes a command from the JSON file and deletes the associated AudioFile.
+   * @param command the name of the command to remove.
+   */
+  public static void removeVoiceCommandFromJSON(String commandName)
+  {
+    
+    File file = new File("VoiceCommands.json");
+    InputStream is = null;
+    
+    try {
+      is = new FileInputStream(file);
+    } catch (FileNotFoundException e) {
+      // TODO Auto-generated catch block
+      e.printStackTrace();
+    }
+    String jsonTxt = null;
+    try {
+      jsonTxt = IOUtils.toString( is );
+    } catch (IOException e) {
+      // TODO Auto-generated catch block
+      e.printStackTrace();
+    }
+    JSONObject jsonObject = (JSONObject) JSONSerializer.toJSON(jsonTxt);
+
+
+    JSONArray commands = jsonObject.getJSONArray("voice_commands");
+
+    // replace existing command if it exists.
+    for (int i = 0; i < commands.size(); i++) {
+      JSONObject commandObj = commands.getJSONObject(i);
+      if (commandObj.getString("command").equals(commandName)) {
+         File audioFile = new File(commandObj.getString("audioPath"));
+         audioFile.delete();
+         commands.remove(i);
+        try (FileWriter writer = new FileWriter("VoiceCommands.json")) {
+          writer.write(jsonObject.toString());
+          return;
+        } catch (IOException e) {
+          e.printStackTrace();
+        }
+
+      }
+    }
+  }
 
 }
