@@ -123,6 +123,7 @@ public class VoiceListener{
     // parse JSON file for bot token.
     token = "";
     JSONParser parser = new JSONParser();
+    
 
     try {
       Object obj = parser.parse(new FileReader("DiscordAudioStreamer\\config.json"));

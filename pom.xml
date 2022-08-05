@@ -32,6 +32,8 @@
           <version>4.0.0</version>
           <type>pom</type>
       </dependency>
+      
+      
 
   <dependency>
     <groupId>org.slf4j</groupId>
@@ -69,6 +71,13 @@
   		<groupId>commons-io</groupId>
   		<artifactId>commons-io</artifactId>
   		<version>2.6</version>
+  	</dependency>
+  	
+  	<dependency>
+  		<groupId>net.sf.json-lib</groupId>
+  		<artifactId>json-lib</artifactId>
+  		<version>2.4</version>
+  		<classifier>jdk15</classifier>
   	</dependency>
   </dependencies>
 </project>
