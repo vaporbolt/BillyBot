@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.HashMap;
@@ -104,6 +105,35 @@ public class VoiceProducer {
   private static void createClient() {
     VoiceProducer.gatewayClient = DiscordClientBuilder.create(getToken()).build().login().block();
   }
+  
+  
+  /**
+   * subssribes to a single command. to be called when adding commands during runTime.
+   * @param command command name
+   * @param path the audio path
+   */
+  public static void addCommand(String voiceCommand, String path)
+  {
+    VOICECOMMANDS.put(voiceCommand, event -> {
+      channel = gatewayClient.getChannelById(channel.getId())
+          .cast(VoiceChannel.class).block();
+      Mono<Void> command = Mono.fromRunnable(() -> {
+        System.out.println("audio command initiating");
+        final AudioProvider provider = GuildAudioManager.of(channel.getGuildId()).getProvider();
+        // final VoiceConnection connection = channel.join(spec ->
+        // spec.setProvider(provider)).block();
+        final AudioPlayer trackPlayer = GuildAudioManager.of(channel.getGuildId()).getPlayer();
+        PLAYER_MANAGER.loadItem(path,
+            new TrackScheduler(trackPlayer));
+
+      });
+
+      command.subscribe();
+      return command;
+
+    });
+  }
+
 
   /**
    * @param commands
@@ -132,7 +162,6 @@ public class VoiceProducer {
     JSONArray commands = jsonObject.getJSONArray("voice_commands");
     
     for(int i = 0; i < commands.size(); i++) {
-      
       JSONObject commandObj = commands.getJSONObject(i);
       String voiceCommand = commandObj.getString("command");
       String path = commandObj.getString("audioPath");
@@ -158,7 +187,8 @@ public class VoiceProducer {
       
       
     }
-
+    
+   
 
     
     VOICECOMMANDS.put("stop", event -> {
@@ -208,12 +238,14 @@ public class VoiceProducer {
 
       return c;
     });
+    
+    
   }
 
   /**
    * helper method which subscribes to all chat commands from the gatewayClient's event dispatcher.
    */
-  private static void distributeEvents() {
+  public static void distributeEvents() {
     gatewayClient.getEventDispatcher().on(MessageCreateEvent.class)
         // subscribe is like block, in that it will *request* for action
         // to be done, but instead of blocking the thread, waiting for it
@@ -228,6 +260,74 @@ public class VoiceProducer {
             }
           }
         });
+  }
+  
+  /**
+   * helper method which updates the JSON file to either replace a command with a given audio file
+   * or add a new command.
+   * 
+   * @param commandName the name of the command to add(what the audio que is)
+   * @param audioPath the path of the audio file.
+   */
+  public static void AddVoiceCommandToJSON(String commandName, String audioPath) {
+    
+    
+    File file = new File("VoiceCommands.json");
+    InputStream is = null;
+    
+    try {
+      is = new FileInputStream(file);
+    } catch (FileNotFoundException e) {
+      // TODO Auto-generated catch block
+      e.printStackTrace();
+    }
+    String jsonTxt = null;
+    try {
+      jsonTxt = IOUtils.toString( is );
+    } catch (IOException e) {
+      // TODO Auto-generated catch block
+      e.printStackTrace();
+    }
+    JSONObject jsonObject = (JSONObject) JSONSerializer.toJSON(jsonTxt);
+
+
+    JSONArray commands = jsonObject.getJSONArray("voice_commands");
+
+    // replace existing command if it exists.
+    for (int i = 0; i < commands.size(); i++) {
+      JSONObject commandObj = commands.getJSONObject(i);
+      if (commandObj.getString("command").equals(commandName)) {
+        File oldAudioFile = new File(commandObj.getString("audioPath"));
+        oldAudioFile.delete();
+        commandObj.put("audioPath", audioPath);
+        try (FileWriter writer = new FileWriter("VoiceCommands.json")) 
+        {
+          writer.write(jsonObject.toString());
+          return;
+        } catch (IOException e) {
+          e.printStackTrace();
+        }
+        
+      }
+      
+      // add to list of commands if it doesn't already exist.
+      JSONObject addedCommand = new JSONObject();
+      addedCommand.put("command", commandName);
+      addedCommand.put("audioPath", audioPath);
+      
+     commands.add(addedCommand);
+     try (FileWriter writer = new FileWriter("VoiceCommands.json")) 
+     {
+       writer.write(jsonObject.toString());
+       return;
+     } catch (IOException e) {
+       e.printStackTrace();
+     }
+
+    }
+
+
+
   }
 
 }
