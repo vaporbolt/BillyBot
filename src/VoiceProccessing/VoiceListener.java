@@ -154,7 +154,7 @@ public class VoiceListener{
                
      // download audioFile.
       try (BufferedInputStream in = new BufferedInputStream(new URL(audio.getUrl()).openStream());
-          FileOutputStream fileOutputStream = new FileOutputStream("UserAudios\\" + audio.getFilename())) {
+          FileOutputStream fileOutputStream = new FileOutputStream("UserAudios/" + audio.getFilename())) {
             byte dataBuffer[] = new byte[1024];
             int bytesRead;
             while ((bytesRead = in.read(dataBuffer, 0, 1024)) != -1) {
@@ -168,10 +168,10 @@ public class VoiceListener{
         }
       
       // add to VoiceCommands JSON file 
-      VoiceProducer.AddVoiceCommandToJSON(command, "UserAudios\\" + audio.getFilename());
+      VoiceProducer.AddVoiceCommandToJSON(command, "UserAudios/" + audio.getFilename());
       
       // add command to voice Producer gateway client.
-      VoiceProducer.addCommand(command, "UserAudios\\" + audio.getFilename());
+      VoiceProducer.addCommand(command, "UserAudios/" + audio.getFilename());
       Mono<Void> successMessage = createMessage(event.getMessage().getChannelId(), " sucessfully added command!");
       successMessage.subscribe();
       
@@ -296,7 +296,7 @@ public class VoiceListener{
     
 
     try {
-      Object obj = parser.parse(new FileReader("DiscordAudioStreamer\\config.json"));
+      Object obj = parser.parse(new FileReader("DiscordAudioStreamer/config.json"));
       JSONObject jsonObject = (JSONObject) obj;
       token = (String) jsonObject.get("token");
     }

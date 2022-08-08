@@ -84,11 +84,11 @@ public class VoiceProducer {
     JSONParser parser = new JSONParser();
 
     try {
-      File file = new File("DiscordAudioStreamer\\config.json");
+      File file = new File("DiscordAudioStreamer/config.json");
       InputStream is = new FileInputStream(file);
   String jsonTxt = IOUtils.toString( is );
   JSONObject jsonObject = (JSONObject) JSONSerializer.toJSON( jsonTxt );  
-      //Object obj = parser.parse(new FileReader("DiscordAudioStreamer\\config.json"));
+      //Object obj = parser.parse(new FileReader("DiscordAudioStreamer/config.json"));
       token =  jsonObject.getString("voice_token");
     }
 

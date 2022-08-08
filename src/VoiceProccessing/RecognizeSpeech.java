@@ -7,7 +7,8 @@ import com.google.cloud.speech.v1.SpeechClient;
 import com.google.cloud.speech.v1.SpeechRecognitionAlternative;
 import com.google.cloud.speech.v1.SpeechRecognitionResult;
 import com.google.protobuf.ByteString;
-
+import io.grpc.LoadBalancerProvider;
+import io.grpc.LoadBalancerRegistry;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;

@@ -28,10 +28,11 @@ public class VoiceStreamer implements Runnable {
     }
 
     exists = true;
+    
 
     streamProcess = new ProcessBuilder("node", "AudioStreamer.js");
-    // set the working directory
     streamProcess.directory(new File("DiscordAudioStreamer"));
+    // set the working directory
     
     // set output to the java console.
     streamProcess.redirectOutput(ProcessBuilder.Redirect.INHERIT);

@@ -4,6 +4,7 @@
   <artifactId>Discord_Voice_to_Speech_command_Bot</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <build>
+  
     <sourceDirectory>src</sourceDirectory>
     <plugins>
       <plugin>
@@ -11,8 +12,62 @@
         <version>3.8.1</version>
         <configuration>
           <release>18</release>
+          
         </configuration>
       </plugin>
+      
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-shade-plugin</artifactId>
+        <version>3.3.0</version>
+        <executions>
+          <execution>
+            <phase>package</phase>
+            <goals>
+              <goal>shade</goal>
+            </goals>
+            <configuration>
+            
+              <transformers>
+                <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                
+                  <mainClass>BotAutomation.BotDriver</mainClass>
+                </transformer>
+                
+                <transformer implementation="org.apache.maven.plugins.shade.resource.ServicesResourceTransformer"/>
+                
+              </transformers>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+      
+   <plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-shade-plugin</artifactId>
+    <version>3.2.4</version>
+    <executions>
+        <execution>
+            <phase>package</phase>
+            <goals>
+                <goal>shade</goal>
+            </goals>
+            <configuration>
+                <filters>
+                    <filter>
+                        <artifact>*:*</artifact>
+                        <excludes>
+                            <exclude>META-INF/*.SF</exclude>
+                            <exclude>META-INF/*.DSA</exclude>
+                            <exclude>META-INF/*.RSA</exclude>
+                        </excludes>
+                    </filter>
+                </filters>
+            </configuration>
+        </execution>
+    </executions>
+</plugin>
+      
     </plugins>
   </build>
   
@@ -26,12 +81,7 @@
 
   <dependencies>
 
-      <dependency>
-          <groupId>com.tagtraum</groupId>
-          <artifactId>ffmpeg</artifactId>
-          <version>4.0.0</version>
-          <type>pom</type>
-      </dependency>
+  
       
       
 
@@ -78,6 +128,11 @@
   		<artifactId>json-lib</artifactId>
   		<version>2.4</version>
   		<classifier>jdk15</classifier>
+  	</dependency>
+  	<dependency>
+  		<groupId>org.apache.maven.plugins</groupId>
+  		<artifactId>maven-shade-plugin</artifactId>
+  		<version>3.3.0</version>
   	</dependency>
   </dependencies>
 </project>
