@@ -77,6 +77,9 @@ yarn-error.log*
 # next.js build output
 .next
 
+# token file
+.config
+
 # Lerna
 lerna-debug.log
 
