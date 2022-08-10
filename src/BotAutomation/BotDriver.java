@@ -51,6 +51,8 @@ import discord4j.voice.VoiceConnection;
 import reactor.core.publisher.Mono;
 
 public class BotDriver {
+  
+  public static SpeechClient speech;
 
 
   public static void main(String[] args) {
@@ -58,7 +60,7 @@ public class BotDriver {
 
     
     // validate speech to text api
-    SpeechClient speech = null;
+    speech = null;
     try {
       speech = SpeechClient.create();
     } catch (IOException e1) {
