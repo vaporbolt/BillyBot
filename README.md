@@ -7,3 +7,11 @@ Introducing Billy Bot! a customizable discord bot that responds to voice command
 [![Watch the video](https://img.youtube.com/vi/EyHBpJnrkfU/maxresdefault.jpg)](https://www.youtube.com/watch?v=EyHBpJnrkfU&ab_channel=SethLastname)
 
 
+I host the bot on an an ec2 instance, however here are some instructions to host the bot on your local machine!
+
+
+Requirements to run the bot:
+
+
+
+
