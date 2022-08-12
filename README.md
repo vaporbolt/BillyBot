@@ -9,8 +9,10 @@ Introducing Billy Bot! a customizable discord bot that responds to voice command
 
 I host the bot on an an ec2 instance, however here are some instructions to host the bot on your local machine!
 
+Step 1: configuring the config.json file
 
-Requirements to run the bot:
+
+
 
 
 
