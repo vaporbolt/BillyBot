@@ -15,7 +15,7 @@ I host the bot on an an ec2 instance, however here are some instructions to host
 
 follow the guide [here](https://windowsloop.com/install-ffmpeg-windows-10)
 
-### Linux
+### Linux (Mint / Ubuntu)
 
 follow the guide [here](https://www.tecmint.com/install-ffmpeg-in-linux)
 
@@ -25,7 +25,9 @@ follow the guide [here](https://www.tecmint.com/install-ffmpeg-in-linux)
 
 Download and install node from [here](https://nodejs.org/en/download)
 
-### Linux
+### Linux (Mint/ Ubuntu)
+
+Follow the tutorial [here](https://techviewleo.com/how-to-install-nodejs-in-linux-mint) 
 
 
 
