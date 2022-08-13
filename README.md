@@ -30,7 +30,7 @@ Download and install node from [here](https://nodejs.org/en/download)
 Follow the tutorial [here](https://techviewleo.com/how-to-install-nodejs-in-linux-mint) 
 
 ## Setting up the config.json file
- Create a config.json file inside the DiscordAudioStreamer directory to look like this
+ Create a config.json file inside the DiscordAudioStreamer directory of your local repo to look like this
 
 
 ![Screenshot 2022-08-13 172304](https://user-images.githubusercontent.com/64103718/184516537-329bbfb4-d2e2-4b07-86a0-9828d8ca587a.png)
