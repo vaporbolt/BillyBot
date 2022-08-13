@@ -35,6 +35,12 @@ Follow the tutorial [here](https://techviewleo.com/how-to-install-nodejs-in-linu
 
 ![Screenshot 2022-08-13 172304](https://user-images.githubusercontent.com/64103718/184516537-329bbfb4-d2e2-4b07-86a0-9828d8ca587a.png)
 
+Replace the tokens with Two unique Discord Bot tokens one for to produce audio, and one to listen to users.
 
+You can create Discord Bots by going [to the Discord Developer Portal Website](https://discord.com/developers/applications)
+
+To find the token for the bots, navigate to here under the "Bot" settings
+
+![billy bot](https://user-images.githubusercontent.com/64103718/184516594-4355b954-24f3-40ca-a39e-86616194eb09.png)
 
 
