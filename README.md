@@ -2,12 +2,12 @@
 
 Introducing Billy Bot! a customizable discord bot that responds to voice commands in a Discord server!
 
-                                                Check out the tutorial video below
+                                                Check out the tutorial video below to see it's features!
 
 [![Watch the video](https://img.youtube.com/vi/EyHBpJnrkfU/maxresdefault.jpg)](https://www.youtube.com/watch?v=EyHBpJnrkfU&ab_channel=SethLastname)
 
 
-I host the bot on an an ec2 instance, however here are some instructions to host the bot on your local machine!
+I host the bot on an an ec2 instance, but currently do not have ec2 configured to handle deployment across many servers. however here are some instructions to host the bot on your local machine!
 
 ## Step 1: installing ffmpeg and adding it to your system path
 
