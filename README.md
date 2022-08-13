@@ -43,4 +43,16 @@ To find the token for the bots, navigate to here under the "Bot" settings
 
 ![billy bot](https://user-images.githubusercontent.com/64103718/184516594-4355b954-24f3-40ca-a39e-86616194eb09.png)
 
+## Invite the bots into the server
+
+You can invite the bots into a discord server by using the following link
+
+https://discord.com/api/oauth2/authorize?client_id=YOUR_BOT_ID_HERE=0&scope=bot%20applications.commands
+
+replace the YOUR_BOT_ID_HERE with your bot's application ID token which can be found here
+
+![Screenshot 2022-08-13 195633](https://user-images.githubusercontent.com/64103718/184517136-344c0fe1-bad4-440b-9387-b6619707bc9c.png)
+
+One the set up is done, simply run the driver to host the bot!
+
 
