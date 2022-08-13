@@ -17,7 +17,16 @@ follow the guide [here](https://windowsloop.com/install-ffmpeg-windows-10)
 
 ### Linux
 
-follow the guide [here] (https://www.tecmint.com/install-ffmpeg-in-linux)
+follow the guide [here](https://www.tecmint.com/install-ffmpeg-in-linux)
+
+## Step 2: Downloading and installing node.js
+
+### Windows
+
+Download and install node from [here](https://nodejs.org/en/download)
+
+### Linux
+
 
 
 
