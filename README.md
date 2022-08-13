@@ -29,6 +29,8 @@ Download and install node from [here](https://nodejs.org/en/download)
 
 Follow the tutorial [here](https://techviewleo.com/how-to-install-nodejs-in-linux-mint) 
 
+## Setting up the config.json file
+
 
 
 
