@@ -68,10 +68,24 @@ and type npm install
 
 ## Running the Bot
 
+### Creating the shaded jar file
+
 The bot is best run via a maven jar.
 
-The dependencies neccessary to make the jar are already included. Simly run maven 
+The dependencies neccessary to make the jar are already included. Simly run the project as maven build, with the only goal being 'package shade: shade'
+
+It should look like this in Eclipse
 
 
+![shade](https://user-images.githubusercontent.com/64103718/184553462-822004e0-7e0a-4dda-8ea7-69c49e65fc61.png)
+
+Now simply put the jar in the root your repo directory and it's ready to run!!
+
+to run in windows or (Most) Linux systems, simply navigate to the local repo directory in your OS terminal and run java-jar my_bot.jar
+
+It should look like this
 
 
+![run jar](https://user-images.githubusercontent.com/64103718/184553628-27434b37-fcfc-4051-b003-a4377b992f29.png)
+
+Now the bot is running!! 
