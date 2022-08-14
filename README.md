@@ -9,17 +9,17 @@ Introducing Billy Bot! a customizable discord bot that responds to voice command
 
 I host the bot on an an ec2 instance, but currently do not have ec2 configured to handle large enough loads for use amongst multiple Discord servers. However here are some instructions to host the bot on your local machine!
 
-## Step 1: installing ffmpeg and adding it to your system path
+## installing ffmpeg and adding it to your system path
 
 ### Windows
 
 follow the guide [here](https://windowsloop.com/install-ffmpeg-windows-10)
 
-### Linux (Mint / Ubuntu)
+## Linux (Mint / Ubuntu)
 
 follow the guide [here](https://www.tecmint.com/install-ffmpeg-in-linux)
 
-## Step 2: Downloading and installing node.js
+## Downloading and installing node.js
 
 ### Windows
 
@@ -58,7 +58,7 @@ replace the YOUR_BOT_ID_HERE with your bot's application ID token which can be f
 
 Make sure you have the latest version of python installed (python3.0+)
 
-navigate to the DiscordAudioStreamer directory in your local repo. Make sure you remove the dependency binaries in the package-lock.json file.
+navigate to the DiscordAudioStreamer directory in your local repo. Make sure you remove the dependency binaries (the package-lock.json file. The binaries in this repo are configured for an amazon ec2 Ubuntu Linux container, so you can likely keep them if you wish to run the bot via EC2, though they may become out of date)
 
 and type npm install
 
