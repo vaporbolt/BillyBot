@@ -65,6 +65,10 @@ and type npm install
 
 ![npm install](https://user-images.githubusercontent.com/64103718/184550971-e03372e8-bf0b-4a49-81bf-ad3e60262076.png)
 
+## Initializing the google cloud api on your machine.
+
+Follow the guides listed [here](https://github.com/googleapis/google-cloud-java)! Note that google cloud api gives users 300 hours of audio translations for free before requiring users to pay for the api call.
+
 
 ## Running the Bot
 
