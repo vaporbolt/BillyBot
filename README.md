@@ -79,6 +79,7 @@ It should look like this in Eclipse
 
 ![shade](https://user-images.githubusercontent.com/64103718/184553462-822004e0-7e0a-4dda-8ea7-69c49e65fc61.png)
 
+I use a multithreaded implementation of the maven build to make it build faster, but depending on your hardware you may want to build it on a single thread
 Now simply put the jar in the root your repo directory and it's ready to run!!
 
 to run in windows or (Most) Linux systems, simply navigate to the local repo directory in your OS terminal and run java-jar my_bot.jar
