@@ -54,7 +54,7 @@ replace the YOUR_BOT_ID_HERE with your bot's application ID token which can be f
 ![Screenshot 2022-08-13 195633](https://user-images.githubusercontent.com/64103718/184517136-344c0fe1-bad4-440b-9387-b6619707bc9c.png)
 
 
-## Installing the node Packages
+## Installing the node dependencies
 
 Make sure you have the latest version of python installed (python3.0+)
 
@@ -64,6 +64,14 @@ and type npm install
 
 
 ![npm install](https://user-images.githubusercontent.com/64103718/184550971-e03372e8-bf0b-4a49-81bf-ad3e60262076.png)
+
+
+## Running the Bot
+
+The bot is best run via a maven jar.
+
+The dependencies neccessary to make the jar are already included. Simly run maven 
+
 
 
 
