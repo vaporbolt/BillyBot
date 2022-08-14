@@ -78,7 +78,11 @@ yarn-error.log*
 .next
 
 # token file
-.config
+config.json
+
+#voice commands
+Voice_commands.JSON
+
 
 # Lerna
 lerna-debug.log
@@ -86,6 +90,7 @@ lerna-debug.log
 # System Files
 .DS_Store
 Thumbs.db
+
 
 
 
