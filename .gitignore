@@ -78,10 +78,13 @@ yarn-error.log*
 .next
 
 # token file
-config.json
+/DiscordAudioStreamer/config.json
 
 #voice commands
 Voice_commands.JSON
+
+#UserAudios
+/UserAudios
 
 
 # Lerna
