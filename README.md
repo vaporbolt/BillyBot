@@ -89,4 +89,4 @@ It should look like this
 
 ![run jar](https://user-images.githubusercontent.com/64103718/184553628-27434b37-fcfc-4051-b003-a4377b992f29.png)
 
-Now the bot is running!! 
+## Congrats! now the bot is running! make sure to check out the tutorial or type !help in your discord server for usage directions!
